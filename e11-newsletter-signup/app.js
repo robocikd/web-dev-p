@@ -9,3 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(PORT, function () {
 	console.log(`App is running on port ${PORT}`);
 });
+
+app.get('/', function (req, res) {
+	res.sendFile(__dirname + '/signup.html');
+});
