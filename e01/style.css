@@ -1,0 +1,37 @@
+body {
+	margin: 0;
+}
+
+.yellow,
+.red,
+.green,
+.black {
+	width: 100px;
+	height: 100px;
+}
+
+.yellow {
+	background-color: yellow;
+	position: absolute;
+}
+.red {
+	background-color: red;
+	position: absolute;
+	top: 40px;
+}
+.green {
+	background-color: green;
+	position: absolute;
+	left: 40px;
+}
+
+.black {
+	background-color: black;
+	position: relative;
+}
+.container {
+	width: 400px;
+	height: 400px;
+	background-color: grey;
+	position: relative;
+}
