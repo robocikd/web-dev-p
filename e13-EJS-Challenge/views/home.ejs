@@ -3,4 +3,15 @@
     <p>
         <%= homeStartingContent %>
     </p>
-    <%- include('./partials/footer') %>
+
+    <% posts.forEach(post=> { %>
+        <div class="form-group">
+            <h2>
+                <%= post.postTitle %>
+            </h2>
+            <p>
+                <%= post.postBody %>
+            </p>
+        </div>
+        <% }) %>
+            <%- include('./partials/footer') %>
