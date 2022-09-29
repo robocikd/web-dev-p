@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.listen(PORT, function () {
+app.listen(process.env.PORT || PORT, function () {
 	console.log(`App is running on port ${PORT}`);
 });
 
@@ -35,24 +35,27 @@ app.post('/', function (req, res) {
 		],
 	};
 	const dataJson = JSON.stringify(data);
-	const url = 'https://us10.api.mailchimp.com/3.0/lists/{yourListId}';
+	const url = 'https://us10.api.mailchimp.com/3.0/lists/4d12effa9a';
 	const options = {
 		method: 'POST',
-		auth: 'damian:{yourApiKey}',
+		auth: 'damian:b082694a2f5c63efb4504a7d8f0eabb2-us10',
 	};
 	const request = https.request(url, options, function (response) {
 		const statusCode = response.statusCode;
 
 		if (statusCode === 200) {
-			res.sendFile(`${__dirname}/success.html`);
+			res.sendFile(__dirname + '/success.html');
 		} else {
-			res.sendFile(`${__dirname}/failure.html`);
+			res.sendFile(__dirname + '/failure.html');
 		}
 
 		response.on('data', function (data) {
 			console.log(JSON.parse(data));
 		});
 	});
+	request.on('error', function(err){
+		res.sendFile(__dirname + '/failure.html');
+	})
 	request.write(dataJson);
 	request.end();
 });
