@@ -13,6 +13,10 @@ const contactContent =
 	'Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.';
 
 const posts = [];
+const post1 = {postTitle: "Day 1", postBody: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit non, nisi quaerat nemo natus, quis et voluptatum hic fugit tenetur id! Mollitia aperiam dolorem, magni consequuntur explicabo facilis consequatur iusto fugit molestias placeat temporibus quis cum omnis excepturi doloribus enim ratione aspernatur quasi esse vitae architecto perspiciatis fugiat iste? Asperiores."}
+const post2 = {postTitle: "Day 2", postBody: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit non, nisi quaerat nemo natus, quis et voluptatum hic fugit tenetur id! Mollitia aperiam dolorem, magni consequuntur explicabo facilis consequatur iusto fugit molestias placeat temporibus quis cum omnis excepturi doloribus enim ratione aspernatur quasi esse vitae architecto perspiciatis fugiat iste? Asperiores."}
+const post3 = {postTitle: "Day 3", postBody: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit non, nisi quaerat nemo natus, quis et voluptatum hic fugit tenetur id! Mollitia aperiam dolorem, magni consequuntur explicabo facilis consequatur iusto fugit molestias placeat temporibus quis cum omnis excepturi doloribus enim ratione aspernatur quasi esse vitae architecto perspiciatis fugiat iste? Asperiores."}
+posts.push(post1, post2, post3);
 
 const app = express();
 
