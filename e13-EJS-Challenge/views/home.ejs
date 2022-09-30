@@ -10,7 +10,7 @@
                 <%= post.postTitle %>
             </h2>
             <p>
-                <%= post.postBody %>
+                <%= post.postBody.substring(0, 100) + ' ...' %>
             </p>
         </div>
         <% }) %>
